@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>tabelle</h1>
+
+    <table>
+        <caption>Il Bilancio</caption>
+        <colgroup>
+           <col>
+        <col ></colgroup>
+        <thead>
+            <tr>
+                <th>mesi</th>
+                <th>entrate</th>
+                <th>uscite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>gennaio</td>
+                <td>+600</td>
+                <td>-479</td>
+            </tr>
+            <tr>
+                <td>febbraio</td>
+                <td>+888</td>
+                <td>-821</td>
+            </tr>
+            <tr>
+                <td>marzo</td>
+                <td>+498</td>
+                <td>-250</td>
+                
+            </tr>
+            <tr>
+                <td>totale</td>
+                <td>+1.986</td>
+                <td>-1550</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+</body>
+</html>
