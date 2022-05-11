@@ -1,0 +1,95 @@
+
+<html>
+    <head>
+    <title>Estrai solo i sottotitoli, rimuovi i timesteps</title>
+    <script language = "JavaScript">
+    function TryClear(){
+    Length = document.all.TextFields.Input.value.length;
+    FirstSumbol = true;
+    CancelExit =false;
+    var strOut = "";
+    
+    for(i=0; i<Length; i++){
+    ch = document.all.TextFields.Input.value.substring(i,i+1);
+    if(FirstSumbol){
+    if(ch >= '0' && ch <= '9' ){
+    CancelExit =true;
+    FirstSumbol = false;
+    }
+    else {
+    CancelExit =false;
+    strOut += '\n';
+    FirstSumbol = false;
+    }
+    }
+    if(ch == '\n'){
+    FirstSumbol = true;
+    }
+    
+    if((!CancelExit) && (!FirstSumbol)){
+    strOut += ch;
+    document.all.TextFields.Output.value = i;
+    }
+    else continue;
+    }
+    document.all.TextFields.Output.value = strOut;
+    return;
+    }
+    
+    </script>
+    </head>
+    <body>
+        <h1>Estrai il testo solo dai sottotitoli e rimuovi i timestamp</h1>
+       
+        <h3>Hai un file srt con sottotitoli e vuoi rimuovere i timestamp cosi da renderlo più leggibile?</h3>
+        Immagine di esempio:<br/> <img src="http://wow-only.ru/images/subtitles.png" /><br/> <br>
+        apri il tuo file srt con il blocco note. Aggiungi al campo di testo a sinistra e premi "Fai il lavoro!" e il gioco è fatto!<br/>
+    <form name="TextFields">
+    <TEXTAREA type="text" cols="67" rows="10" name="Input" value="" ></TEXTAREA>
+    
+    <TEXTAREA type="text" cols="67" rows="10" name="Output" value="" ></TEXTAREA><br><br><input type="button" value="Fai il lavoro" onClick="TryClear();"></input>
+    </form>
+    
+    
+    <!--google ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4272936223248120"
+         crossorigin="anonymous"></script>
+    <!--google ads -->
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+    try {
+    w.yaCounter20669278 = new Ya.Metrika({id: 20669278, enableAll: true});
+    w.yaCounter10693645 = new Ya.Metrika({id: 10693645, enableAll: true});
+    w.yaCounter15699160 = new Ya.Metrika({id: 15699160, enableAll: true});
+    } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+    <noscript><div><img src="//mc.yandex.ru/watch/20669278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="//mc.yandex.ru/watch/10693645" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="//mc.yandex.ru/watch/15699160" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    </body>
+
+    <style>
+        body {
+            padding: 50px;
+            background-color: rgb(253, 227, 194);
+        }
+    </style>
+    </html>
